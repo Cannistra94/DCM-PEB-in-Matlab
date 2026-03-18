@@ -11,23 +11,23 @@ To maintain a clean and reproducible workflow, the files are organized into func
 
 Contains the primary entry-point scripts that drive the analysis pipeline in sequential order.
 
-dcm_1_new.m: Step 1 - Pre-processing & VOI Extraction. Handles GLM specification, movement regressor creation, and extracting Time Series from Volumes of Interest (VOIs).
+dcm_1.m: Step 1 - Pre-processing & VOI Extraction. Handles GLM specification, movement regressor creation, and extracting Time Series from Volumes of Interest (VOIs).
 
-dcm_2_new.m: Step 2 - Model Specification & Estimation. Sets up the DCM structure (A, B, and C matrices) and runs the inversion/estimation process for every subject.
+dcm_2.m: Step 2 - Model Specification & Estimation. Sets up the DCM structure (A, B, and C matrices) and runs the inversion/estimation process for every subject.
 
-dcm_3_new.m: Step 3 - Group-level PEB Analysis. Aggregates individual DCMs, defines the second-level design matrix (e.g., treatment vs. placebo), and performs Bayesian Model Averaging (BMA).
+dcm_3.m: Step 3 - Group-level PEB Analysis. Aggregates individual DCMs, defines the second-level design matrix (e.g., treatment vs. placebo), and performs Bayesian Model Averaging (BMA).
 
 📂 functions/
 
 Modular helper functions used by the main scripts to perform specific tasks.
 
-createVOI_new.m: Automates the extraction of masked regional time series.
+createVOI.m: Automates the extraction of masked regional time series.
 
-DCMregressor_new.m: Generates the multiple regressor files (motion, WM, CSF) for the GLM.
+DCMregressor.m: Generates the multiple regressor files (motion, WM, CSF) for the GLM.
 
-specify_dcm_new.m: Defines the neural and hemodynamic parameters for the DCM model.
+specify_dcm.m: Defines the neural and hemodynamic parameters for the DCM model.
 
-retrieve_BMA_parameters_new.m: Extracts connectivity strengths and probabilities from the final group results.
+retrieve_BMA_parameters.m: Extracts connectivity strengths and probabilities from the final group results.
 
 spm_glm_rest_dct.m: Implements Discrete Cosine Transform (DCT) filtering within the SPM GLM framework.
 
