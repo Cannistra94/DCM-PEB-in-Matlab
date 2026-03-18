@@ -5,7 +5,6 @@ Dynamic Causal Modeling (DCM) is a framework used to estimate the effective conn
 
 Repository Structure
 
-To maintain a clean and reproducible workflow, the files are organized into functional directories:
 
 📂 scripts/
 
